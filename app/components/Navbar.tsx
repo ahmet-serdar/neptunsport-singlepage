@@ -39,17 +39,19 @@ export default function Navbar({ onMenuClick }: NavbarProps) {
 
         {/* Desktop Navigation items */}
         <div className={styles.navItems}>
-          <a href="#" className={styles.navLink}>Home</a>
+          <a href="/" className={styles.navLink}>Home</a>
           <a href="#" className={styles.navLink}>About</a>
           <a href="#" className={styles.navLink}>Services</a>
+          <a href="/sykkelverksted" className={styles.navLink}>Sykkelverksted</a>
           <a href="#" className={styles.navLink}>Contact</a>
         </div>
 
         {/* Mobile Navigation menu */}
         <div className={`${styles.mobileMenu} ${isMenuOpen ? styles.mobileMenuOpen : ''}`}>
-          <a href="#" className={styles.mobileNavLink} onClick={closeMenu}>Home</a>
+          <a href="/" className={styles.mobileNavLink} onClick={closeMenu}>Home</a>
           <a href="#" className={styles.mobileNavLink} onClick={closeMenu}>About</a>
           <a href="#" className={styles.mobileNavLink} onClick={closeMenu}>Services</a>
+          <a href="/sykkelverksted" className={styles.mobileNavLink} onClick={closeMenu}>Sykkelverksted</a>
           <a href="#" className={styles.mobileNavLink} onClick={closeMenu}>Contact</a>
         </div>
       </div>

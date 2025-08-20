@@ -1,0 +1,298 @@
+.container {
+  min-height: 100vh;
+  background-color: #f8f9fa;
+}
+
+/* Hero Section */
+.heroSection {
+  position: relative;
+  height: 400px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.heroImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.7);
+}
+
+.heroOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  background: rgba(0, 0, 0, 0.4);
+}
+
+.heroTitle {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.heroSubtitle {
+  font-size: 1.5rem;
+  font-weight: 300;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+/* Content */
+.content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+/* Intro Section */
+.introSection {
+  margin-bottom: 3rem;
+  text-align: center;
+}
+
+.introText {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  color: #333;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Section Titles */
+.sectionTitle {
+  font-size: 2.5rem;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #2c3e50;
+}
+
+.sectionIntro {
+  text-align: center;
+  font-size: 1.1rem;
+  color: #666;
+  margin-bottom: 3rem;
+}
+
+/* Services Section */
+.servicesSection {
+  margin-bottom: 4rem;
+}
+
+.servicesGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.serviceCard {
+  background: white;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.serviceCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.serviceCard h3 {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #2c3e50;
+  margin-bottom: 1rem;
+}
+
+.serviceCard p {
+  color: #666;
+  line-height: 1.6;
+}
+
+/* Opening Hours Section */
+.openingHoursSection {
+  margin-bottom: 4rem;
+  background: white;
+  padding: 3rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.openingHours {
+  max-width: 400px;
+  margin: 0 auto 2rem;
+}
+
+.hoursRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem 0;
+  border-bottom: 1px solid #eee;
+}
+
+.hoursRow:last-child {
+  border-bottom: none;
+}
+
+.day {
+  font-weight: 600;
+  color: #2c3e50;
+}
+
+.time {
+  color: #666;
+  font-weight: 500;
+}
+
+.openingNote,
+.bookingNote {
+  text-align: center;
+  color: #666;
+  margin-top: 1rem;
+}
+
+.bookingNote {
+  font-weight: 500;
+  color: #e74c3c;
+}
+
+/* Contact Section */
+.contactSection {
+  margin-bottom: 2rem;
+}
+
+.contactInfo {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 3rem;
+  align-items: start;
+}
+
+.address {
+  background: white;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.address h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #2c3e50;
+  margin-bottom: 1rem;
+}
+
+.address p {
+  color: #666;
+  line-height: 1.6;
+  margin-bottom: 0.5rem;
+}
+
+.mapContainer {
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.map {
+  width: 100%;
+  height: 300px;
+  background: #f0f0f0;
+  position: relative;
+}
+
+.mapPlaceholder {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #666;
+  text-align: center;
+  background: #f8f9fa;
+}
+
+.mapPlaceholder p {
+  margin: 0.25rem 0;
+  font-size: 0.9rem;
+}
+
+.mapPlaceholder p:first-child {
+  font-weight: 600;
+  color: #2c3e50;
+  font-size: 1rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .heroTitle {
+    font-size: 2rem;
+  }
+  
+  .heroSubtitle {
+    font-size: 1.2rem;
+  }
+  
+  .content {
+    padding: 1rem;
+  }
+  
+  .servicesGrid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  .contactInfo {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  
+  .openingHoursSection {
+    padding: 2rem 1rem;
+  }
+  
+  .sectionTitle {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .heroSection {
+    height: 300px;
+  }
+  
+  .heroTitle {
+    font-size: 1.8rem;
+  }
+  
+  .heroSubtitle {
+    font-size: 1rem;
+  }
+  
+  .introText {
+    font-size: 1rem;
+  }
+  
+  .serviceCard {
+    padding: 1.5rem;
+  }
+}
