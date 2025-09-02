@@ -1,9 +1,0 @@
-<svg width="500" height="300" viewBox="0 0 500 300" xmlns="http://www.w3.org/2000/svg">
-  <rect width="500" height="300" fill="#f0fff0"/>
-  <rect x="50" y="50" width="400" height="200" fill="#e6ffe6" stroke="#28a745" stroke-width="2" rx="10"/>
-  <circle cx="200" cy="150" r="50" fill="#28a745" opacity="0.7"/>
-  <circle cx="300" cy="150" r="50" fill="#28a745" opacity="0.7"/>
-  <rect x="180" y="120" width="140" height="60" fill="#28a745" opacity="0.3" rx="10"/>
-  <text x="250" y="220" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="#333">Dekktrykk</text>
-  <text x="250" y="240" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#666">Bilde kommer snart</text>
-</svg>

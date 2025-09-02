@@ -1,68 +1,20 @@
 'use client';
 
-import { useEffect } from 'react';
+import Image from 'next/image'
 import styles from './page.module.css';
 
 export default function SykkelverkstedPage() {
-  useEffect(() => {
-    // Load Google Maps script
-    const script = document.createElement('script');
-    script.src = `https://maps.googleapis.com/maps/api/js?key=YOUR_GOOGLE_MAPS_API_KEY&libraries=places`;
-    script.async = true;
-    script.defer = true;
-    script.onload = () => {
-      initMap();
-    };
-    document.head.appendChild(script);
-
-    return () => {
-      document.head.removeChild(script);
-    };
-  }, []);
-
-  const initMap = () => {
-    // Oslo coordinates (you can change this to your actual address)
-    const oslo = { lat: 59.9139, lng: 10.7522 };
-    
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    const map = new (window as any).google.maps.Map(document.getElementById('map'), {
-      zoom: 15,
-      center: oslo,
-      styles: [
-        {
-          featureType: 'poi',
-          elementType: 'labels',
-          stylers: [{ visibility: 'off' }]
-        }
-      ]
-    });
-
-    // Add a marker for the bike workshop
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    new (window as any).google.maps.Marker({
-      position: oslo,
-      map: map,
-      title: 'NeptunSport Sykkelverksted',
-      icon: {
-        url: 'data:image/svg+xml;charset=UTF-8,' + encodeURIComponent(`
-          <svg width="32" height="32" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
-            <circle cx="16" cy="16" r="16" fill="#e74c3c"/>
-            <path d="M16 8c-4.4 0-8 3.6-8 8s3.6 8 8 8 8-3.6 8-8-3.6-8-8-8zm0 12c-2.2 0-4-1.8-4-4s1.8-4 4-4 4 1.8 4 4-1.8 4-4 4z" fill="white"/>
-          </svg>
-        `),
-        scaledSize: new (window as any).google.maps.Size(32, 32)
-      }
-    });
-  };
-
+  
   return (
     <div className={styles.container}>
       {/* Hero Image */}
       <div className={styles.heroSection}>
-        <img 
+        <Image
           src="/bike-workshop.webp" 
           alt="Sykkelverksted" 
           className={styles.heroImage}
+          width={1200}
+          height={600}
         />
         <div className={styles.heroOverlay}>
           <h1 className={styles.heroTitle}>🚲 Sykkelverksted</h1>
@@ -170,15 +122,6 @@ export default function SykkelverkstedPage() {
               <p>2052 Jessheim</p>
               <p>Norge</p>
             </div>
-            {/* <div className={styles.mapContainer}>
-              <div id="map" className={styles.map}>
-                <div className={styles.mapPlaceholder}>
-                  <p>📍 NeptunSport Sykkelverksted</p>
-                  <p>Hestehovstien 3E, 2052 Jessheim</p>
-                  <p>Kart lastes...</p>
-                </div>
-              </div>
-            </div> */}
           </div>
         </section>
       </div>

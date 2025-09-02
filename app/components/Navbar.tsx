@@ -1,60 +1,91 @@
-'use client';
+'use client'
 
-import { useState } from 'react';
-import styles from './Navbar.module.css';
+import { useState } from 'react'
+import Link from 'next/link'
+import styles from './Navbar.module.css'
 
 interface NavbarProps {
-  onMenuClick?: () => void;
+  onMenuClick?: () => void
 }
 
 export default function Navbar({ onMenuClick }: NavbarProps) {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false)
 
   const handleMenuClick = () => {
-    setIsMenuOpen(!isMenuOpen);
-    onMenuClick?.();
-  };
+    setIsMenuOpen(!isMenuOpen)
+    onMenuClick?.()
+  }
 
   const closeMenu = () => {
-    setIsMenuOpen(false);
-  };
+    setIsMenuOpen(false)
+  }
 
   return (
     <nav className={styles.navbar}>
       <div className={styles.navbarContainer}>
         <div className={styles.brand}>
-          <h1 className={styles.brandText}>NeptunSport</h1>
+          <Link href='/'>
+            <h1 className={styles.brandText}>NeptunSport</h1>
+          </Link>
         </div>
 
         {/* Hamburger menu button for mobile */}
-        <button 
+        <button
           className={styles.hamburgerButton}
           onClick={handleMenuClick}
-          aria-label="Toggle menu"
+          aria-label='Toggle menu'
         >
-          <span className={`${styles.hamburgerLine} ${isMenuOpen ? styles.active : ''}`}></span>
-          <span className={`${styles.hamburgerLine} ${isMenuOpen ? styles.active : ''}`}></span>
-          <span className={`${styles.hamburgerLine} ${isMenuOpen ? styles.active : ''}`}></span>
+          <span
+            className={`${styles.hamburgerLine} ${
+              isMenuOpen ? styles.active : ''
+            }`}
+          ></span>
+          <span
+            className={`${styles.hamburgerLine} ${
+              isMenuOpen ? styles.active : ''
+            }`}
+          ></span>
+          <span
+            className={`${styles.hamburgerLine} ${
+              isMenuOpen ? styles.active : ''
+            }`}
+          ></span>
         </button>
 
         {/* Desktop Navigation items */}
         <div className={styles.navItems}>
-          <a href="/" className={styles.navLink}>Home</a>
-          <a href="#" className={styles.navLink}>About</a>
-          <a href="#" className={styles.navLink}>Services</a>
-          <a href="/sykkelverksted" className={styles.navLink}>Sykkelverksted</a>
-          <a href="#" className={styles.navLink}>Contact</a>
+          <Link href='/' className={styles.navLink}>
+            Home
+          </Link>
+          <Link href='/sykkelverksted' className={styles.navLink}>
+            Sykkelverksted
+          </Link>
+          <Link href='/contact' className={styles.navLink}>
+            Kontakt
+          </Link>
         </div>
 
         {/* Mobile Navigation menu */}
-        <div className={`${styles.mobileMenu} ${isMenuOpen ? styles.mobileMenuOpen : ''}`}>
-          <a href="/" className={styles.mobileNavLink} onClick={closeMenu}>Home</a>
-          <a href="#" className={styles.mobileNavLink} onClick={closeMenu}>About</a>
-          <a href="#" className={styles.mobileNavLink} onClick={closeMenu}>Services</a>
-          <a href="/sykkelverksted" className={styles.mobileNavLink} onClick={closeMenu}>Sykkelverksted</a>
-          <a href="#" className={styles.mobileNavLink} onClick={closeMenu}>Contact</a>
+        <div
+          className={`${styles.mobileMenu} ${
+            isMenuOpen ? styles.mobileMenuOpen : ''
+          }`}
+        >
+          <Link href='/' className={styles.mobileNavLink} onClick={closeMenu}>
+            Home
+          </Link>
+          <Link
+            href='/sykkelverksted'
+            className={styles.mobileNavLink}
+            onClick={closeMenu}
+          >
+            Sykkelverksted
+          </Link>
+          <Link href='/contact' className={styles.mobileNavLink} onClick={closeMenu}>
+            Kontakt
+          </Link>
         </div>
       </div>
     </nav>
-  );
+  )
 }
