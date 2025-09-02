@@ -23,7 +23,7 @@ export default function Home() {
                 Sykler og sportsutstyr for alle eventyr!
               </p>
               <Link href='/sykkelverksted'>
-                <button className={styles.heroButton}>Sykkel Verksted</button>
+                <button className={styles.heroButton}>Sykkel Verksted</button> 
               </Link>
             </div>
           </div>
