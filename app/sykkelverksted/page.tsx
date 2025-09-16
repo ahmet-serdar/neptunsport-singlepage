@@ -118,7 +118,7 @@ export default function SykkelverkstedPage() {
             <div className={styles.address}>
               <h3>Adresse</h3>
               <p>NeptunSport Sykkelverksted</p>
-              <p>Hestehovstien 3E</p>
+              <p>Hestehovstien 3</p>
               <p>2052 Jessheim</p>
               <p>Norge</p>
             </div>
