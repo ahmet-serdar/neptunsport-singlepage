@@ -76,27 +76,27 @@ export default function SykkelverkstedPage() {
           <div className={styles.openingHours}>
             <div className={styles.hoursRow}>
               <span className={styles.day}>Mandag:</span>
-              <span className={styles.time}>10:00 – 18:30</span>
+              <span className={styles.time}>11:00 – 18:00</span>
             </div>
             <div className={styles.hoursRow}>
               <span className={styles.day}>Tirsdag:</span>
-              <span className={styles.time}>10:00 – 17:30</span>
+              <span className={styles.time}>11:00 – 18:00</span>
             </div>
             <div className={styles.hoursRow}>
               <span className={styles.day}>Onsdag:</span>
-              <span className={styles.time}>10:00 – 18:30</span>
+              <span className={styles.time}>11:00 – 18:00</span>
             </div>
             <div className={styles.hoursRow}>
               <span className={styles.day}>Torsdag:</span>
-              <span className={styles.time}>10:00 – 18:30</span>
+              <span className={styles.time}>11:00 – 18:00</span>
             </div>
             <div className={styles.hoursRow}>
               <span className={styles.day}>Fredag:</span>
-              <span className={styles.time}>09:00 – 17:30</span>
+              <span className={styles.time}>11:00 – 18:00</span>
             </div>
             <div className={styles.hoursRow}>
               <span className={styles.day}>Lørdag:</span>
-              <span className={styles.time}>10:00 – 18:30</span>
+              <span className={styles.time}>11:00 – 18:00</span>
             </div>
             <div className={styles.hoursRow}>
               <span className={styles.day}>Søndag:</span>
@@ -118,8 +118,8 @@ export default function SykkelverkstedPage() {
             <div className={styles.address}>
               <h3>Adresse</h3>
               <p>NeptunSport Sykkelverksted</p>
-              <p>Hestehovstien 3</p>
-              <p>2052 Jessheim</p>
+              <p>Sinsenterrassen 2B</p>
+              <p>0574 Oslo</p>
               <p>Norge</p>
             </div>
           </div>
