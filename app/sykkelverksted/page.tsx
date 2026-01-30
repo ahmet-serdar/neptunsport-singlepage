@@ -1,24 +1,33 @@
-'use client';
+'use client'
 
 import Image from 'next/image'
-import styles from './page.module.css';
+import styles from './page.module.css'
 
 export default function SykkelverkstedPage() {
-  
   return (
     <div className={styles.container}>
       {/* Hero Image */}
       <div className={styles.heroSection}>
         <Image
-          src="/bike-workshop.webp" 
-          alt="Sykkelverksted" 
+          src='/bike-workshop.webp'
+          alt='Sykkelverksted'
           className={styles.heroImage}
           width={1200}
           height={600}
         />
         <div className={styles.heroOverlay}>
-          <h1 className={styles.heroTitle}>🚲 Sykkelverksted</h1>
+          <h1 className={styles.heroTitle}>Sykkelverksted</h1>
           <p className={styles.heroSubtitle}>Vi tar vare på sykkelen din</p>
+          <div className={styles.bestillTimeCont}>
+          <a
+            href='https://app.bikefolder.com/customer/invite-book/no?shopId=ea530bfb-efe2-4bc5-8335-7a2d93fad69c&bikeCardId=null'
+            target='_blank'
+            rel='noopener noreferrer'
+            className={styles.bestillTime}
+          >
+            Bestill time
+          </a>
+          </div>
         </div>
       </div>
 
@@ -26,7 +35,11 @@ export default function SykkelverkstedPage() {
       <div className={styles.content}>
         <section className={styles.introSection}>
           <p className={styles.introText}>
-            Velkommen til vårt sykkelverksted! Enten du trenger en enkel justering, en større service eller en reparasjon etter et uhell, står vårt erfarne verkstedteam klare til å hjelpe deg. Vi har lidenskap for sykler og sørger for at din tohjuling får den beste behandlingen – raskt og profesjonelt.
+            Velkommen til vårt sykkelverksted! Enten du trenger en enkel
+            justering, en større service eller en reparasjon etter et uhell,
+            står vårt erfarne verkstedteam klare til å hjelpe deg. Vi har
+            lidenskap for sykler og sørger for at din tohjuling får den beste
+            behandlingen – raskt og profesjonelt.
           </p>
         </section>
 
@@ -36,36 +49,50 @@ export default function SykkelverkstedPage() {
           <p className={styles.sectionIntro}>
             Vi tilbyr et bredt spekter av tjenester for alle typer sykler:
           </p>
-          
+
           <div className={styles.servicesGrid}>
             <div className={styles.serviceCard}>
               <h3>Service og vedlikehold</h3>
-              <p>Regelmessig service forlenger levetiden på sykkelen din og gir en tryggere og mer behagelig sykkelopplevelse.</p>
+              <p>
+                Regelmessig service forlenger levetiden på sykkelen din og gir
+                en tryggere og mer behagelig sykkelopplevelse.
+              </p>
             </div>
-            
+
             <div className={styles.serviceCard}>
               <h3>Bremse- og girjustering</h3>
-              <p>Vi sørger for at gir og bremser fungerer som de skal – presist og sikkert.</p>
+              <p>
+                Vi sørger for at gir og bremser fungerer som de skal – presist
+                og sikkert.
+              </p>
             </div>
-            
+
             <div className={styles.serviceCard}>
               <h3>Dekkskift og slangebytte</h3>
               <p>Punktert? Vi bytter både dekk og slange mens du venter.</p>
             </div>
-            
+
             <div className={styles.serviceCard}>
               <h3>Hjulretting og eikestramming</h3>
-              <p>Vi retter skjeve hjul og sørger for at alt ruller som det skal.</p>
+              <p>
+                Vi retter skjeve hjul og sørger for at alt ruller som det skal.
+              </p>
             </div>
-            
+
             <div className={styles.serviceCard}>
               <h3>Demper-service</h3>
-              <p>Vi tilbyr service på dempergaffel og bakdemper – enten det gjelder rengjøring, olje- og pakningsbytte eller justering.</p>
+              <p>
+                Vi tilbyr service på dempergaffel og bakdemper – enten det
+                gjelder rengjøring, olje- og pakningsbytte eller justering.
+              </p>
             </div>
-            
+
             <div className={styles.serviceCard}>
               <h3>Montering av deler og tilbehør</h3>
-              <p>Har du kjøpt nye pedaler, kurv, barnesete eller lys? Vi monterer det for deg.</p>
+              <p>
+                Har du kjøpt nye pedaler, kurv, barnesete eller lys? Vi monterer
+                det for deg.
+              </p>
             </div>
           </div>
         </section>
@@ -107,7 +134,8 @@ export default function SykkelverkstedPage() {
             Åpningstidene kan variere. Kontakt oss gjerne for å være sikker.
           </p>
           <p className={styles.bookingNote}>
-            <strong>NB:</strong> Vi anbefaler å bestille time på forhånd for større servicer.
+            <strong>NB:</strong> Vi anbefaler å bestille time på forhånd for
+            større servicer.
           </p>
         </section>
 
@@ -126,5 +154,5 @@ export default function SykkelverkstedPage() {
         </section>
       </div>
     </div>
-  );
+  )
 }
