@@ -26,7 +26,7 @@ export default function ContactPage() {
             <div className={styles.row}>
               <dt className={styles.term}>Fysisk adresse</dt>
               <dd className={styles.detail}>
-                <address className={styles.address}>Zorlu, Sinsenterrassen 2B, 0574 Oslo, Norge</address>
+                <address className={styles.address}>Neptunsport, Sinsenterrassen 2B, 0574 Oslo, Norge</address>
               </dd>
             </div>
           </dl>
