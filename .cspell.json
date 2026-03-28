@@ -1,0 +1,5 @@
+{
+  "version": "0.2",
+  "language": "en,nb",
+  "ignorePaths": ["node_modules", ".next", "*.lock"]
+}

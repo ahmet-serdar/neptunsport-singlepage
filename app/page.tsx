@@ -10,20 +10,30 @@ export default function Home() {
           <div className={styles.heroImageContainer}>
             <Image
               className={styles.heroImage}
-              src='/hero-image.jpg'
-              alt='Hero image'
+              src='/woom-hero.png'
+              alt='Barn som sykler på Woom-sykkel'
               width={1200}
               height={600}
               priority
             />
             <div className={styles.overlay}></div>
             <div className={styles.heroText}>
-              <h1 className={styles.heroTitle}>Welcome to Neptunsport</h1>
+              <div className={styles.heroBadgeRow}>
+                <span className={styles.heroBadge}>Kommer snart</span>
+                <span className={styles.heroAvailableBadge}>
+                  <Image src='/woom-logo.svg' alt='Woom' width={52} height={10} />
+                  <span>tilgjengelig nå</span>
+                </span>
+              </div>
+              <h1 className={styles.heroTitle}>Sykler for hele familien</h1>
               <p className={styles.heroSubtitle}>
-                Sykler og sportsutstyr for alle eventyr!
+                Vår nettbutikk er under utvikling og lanseres snart.
+              </p>
+              <p className={styles.heroCallout}>
+                Woom-sykler er tilgjengelig nå — ring oss på <a href="tel:+4748909384" className={styles.phoneLink}><strong>489 09 384</strong></a>
               </p>
               <Link href='/sykkelverksted'>
-                <button className={styles.heroButton}>Sykkel Verksted</button> 
+                <button className={styles.heroButton}>Bestill sykkelservice</button>
               </Link>
             </div>
           </div>

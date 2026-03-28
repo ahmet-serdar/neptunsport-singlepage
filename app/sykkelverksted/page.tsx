@@ -97,7 +97,7 @@ export default function SykkelverkstedPage() {
           </div>
         </section>
 
-        {/* Opening Hours Section */}
+        {/* Opening Hours Section
         <section className={styles.openingHoursSection}>
           <h2 className={styles.sectionTitle}>🕒 Åpningstider</h2>
           <div className={styles.openingHours}>
@@ -137,7 +137,7 @@ export default function SykkelverkstedPage() {
             <strong>NB:</strong> Vi anbefaler å bestille time på forhånd for
             større servicer.
           </p>
-        </section>
+        </section> */}
 
         {/* Contact and Map Section */}
         <section className={styles.contactSection}>

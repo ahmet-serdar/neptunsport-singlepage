@@ -9,7 +9,7 @@ export default function ContactPage() {
           <dl className={styles.list}>
             <div className={styles.row}>
               <dt className={styles.term}>Handelsnavn</dt>
-              <dd className={styles.detail}>Zorlu Neptunsport</dd>
+              <dd className={styles.detail}>Neptunsport</dd>
             </div>
             <div className={styles.row}>
               <dt className={styles.term}>Telefonnummer</dt>
